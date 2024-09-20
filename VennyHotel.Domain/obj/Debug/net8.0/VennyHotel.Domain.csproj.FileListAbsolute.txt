@@ -1,0 +1,11 @@
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Domain\bin\Debug\net8.0\VennyHotel.Domain.deps.json
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Domain\bin\Debug\net8.0\VennyHotel.Domain.dll
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Domain\bin\Debug\net8.0\VennyHotel.Domain.pdb
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Domain\obj\Debug\net8.0\VennyHotel.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Domain\obj\Debug\net8.0\VennyHotel.Domain.AssemblyInfoInputs.cache
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Domain\obj\Debug\net8.0\VennyHotel.Domain.AssemblyInfo.cs
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Domain\obj\Debug\net8.0\VennyHotel.Domain.csproj.CoreCompileInputs.cache
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Domain\obj\Debug\net8.0\VennyHotel.Domain.dll
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Domain\obj\Debug\net8.0\refint\VennyHotel.Domain.dll
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Domain\obj\Debug\net8.0\VennyHotel.Domain.pdb
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Domain\obj\Debug\net8.0\ref\VennyHotel.Domain.dll

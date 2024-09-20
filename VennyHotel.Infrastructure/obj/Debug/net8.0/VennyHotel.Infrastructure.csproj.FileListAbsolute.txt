@@ -1,0 +1,17 @@
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Infrastructure\bin\Debug\net8.0\VennyHotel.Infrastructure.deps.json
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Infrastructure\bin\Debug\net8.0\VennyHotel.Infrastructure.runtimeconfig.json
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Infrastructure\bin\Debug\net8.0\VennyHotel.Infrastructure.dll
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Infrastructure\bin\Debug\net8.0\VennyHotel.Infrastructure.pdb
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Infrastructure\bin\Debug\net8.0\VennyHotel.Domain.dll
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Infrastructure\bin\Debug\net8.0\VennyHotel.Domain.pdb
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Infrastructure\obj\Debug\net8.0\VennyHotel.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Infrastructure\obj\Debug\net8.0\VennyHotel.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Infrastructure\obj\Debug\net8.0\VennyHotel.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Infrastructure\obj\Debug\net8.0\VennyHotel.Infrastructure.AssemblyInfo.cs
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Infrastructure\obj\Debug\net8.0\VennyHotel.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Infrastructure\obj\Debug\net8.0\VennyHot.114D7D15.Up2Date
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Infrastructure\obj\Debug\net8.0\VennyHotel.Infrastructure.dll
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Infrastructure\obj\Debug\net8.0\refint\VennyHotel.Infrastructure.dll
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Infrastructure\obj\Debug\net8.0\VennyHotel.Infrastructure.pdb
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Infrastructure\obj\Debug\net8.0\VennyHotel.Infrastructure.genruntimeconfig.cache
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Infrastructure\obj\Debug\net8.0\ref\VennyHotel.Infrastructure.dll

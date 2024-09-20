@@ -1,0 +1,83 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\HomePC\\source\\repos\\VennyHotel\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{88ECC33C-5AB1-4252-9C1C-C8ACB4D06BFA}|VennyHotel.Web\\VennyHotel.Web.csproj|c:\\users\\homepc\\source\\repos\\vennyhotel\\vennyhotel.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88ECC33C-5AB1-4252-9C1C-C8ACB4D06BFA}|VennyHotel.Web\\VennyHotel.Web.csproj|solutionrelative:vennyhotel.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88ECC33C-5AB1-4252-9C1C-C8ACB4D06BFA}|VennyHotel.Web\\VennyHotel.Web.csproj|c:\\users\\homepc\\source\\repos\\vennyhotel\\vennyhotel.web\\views\\shared\\_notification.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88ECC33C-5AB1-4252-9C1C-C8ACB4D06BFA}|VennyHotel.Web\\VennyHotel.Web.csproj|solutionrelative:vennyhotel.web\\views\\shared\\_notification.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88ECC33C-5AB1-4252-9C1C-C8ACB4D06BFA}|VennyHotel.Web\\VennyHotel.Web.csproj|c:\\users\\homepc\\source\\repos\\vennyhotel\\vennyhotel.web\\controllers\\hotelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88ECC33C-5AB1-4252-9C1C-C8ACB4D06BFA}|VennyHotel.Web\\VennyHotel.Web.csproj|solutionrelative:vennyhotel.web\\controllers\\hotelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Notification.cshtml",
+              "DocumentMoniker": "C:\\Users\\HomePC\\source\\repos\\VennyHotel\\VennyHotel.Web\\Views\\Shared\\_Notification.cshtml",
+              "RelativeDocumentMoniker": "VennyHotel.Web\\Views\\Shared\\_Notification.cshtml",
+              "ToolTip": "C:\\Users\\HomePC\\source\\repos\\VennyHotel\\VennyHotel.Web\\Views\\Shared\\_Notification.cshtml",
+              "RelativeToolTip": "VennyHotel.Web\\Views\\Shared\\_Notification.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-20T08:23:31.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HotelController.cs",
+              "DocumentMoniker": "C:\\Users\\HomePC\\source\\repos\\VennyHotel\\VennyHotel.Web\\Controllers\\HotelController.cs",
+              "RelativeDocumentMoniker": "VennyHotel.Web\\Controllers\\HotelController.cs",
+              "ToolTip": "C:\\Users\\HomePC\\source\\repos\\VennyHotel\\VennyHotel.Web\\Controllers\\HotelController.cs",
+              "RelativeToolTip": "VennyHotel.Web\\Controllers\\HotelController.cs",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAAE8AAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T07:45:36.612Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\HomePC\\source\\repos\\VennyHotel\\VennyHotel.Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "VennyHotel.Web\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\HomePC\\source\\repos\\VennyHotel\\VennyHotel.Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "VennyHotel.Web\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-20T07:37:10.974Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

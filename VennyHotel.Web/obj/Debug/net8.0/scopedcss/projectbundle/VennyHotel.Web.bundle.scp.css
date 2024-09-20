@@ -1,0 +1,49 @@
+/* _content/VennyHotel.Web/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-gokfq17yla] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-gokfq17yla] {
+  color: #0077cc;
+}
+
+.btn-primary[b-gokfq17yla] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-gokfq17yla], .nav-pills .show > .nav-link[b-gokfq17yla] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-gokfq17yla] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-gokfq17yla] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-gokfq17yla] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-gokfq17yla] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-gokfq17yla] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
