@@ -9,3 +9,4 @@ C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Application\obj\Debug\net8.0\
 C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Application\obj\Debug\net8.0\refint\VennyHotel.Application.dll
 C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Application\obj\Debug\net8.0\VennyHotel.Application.pdb
 C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Application\obj\Debug\net8.0\ref\VennyHotel.Application.dll
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Application\obj\Debug\net8.0\VennyHotel.Application.sourcelink.json

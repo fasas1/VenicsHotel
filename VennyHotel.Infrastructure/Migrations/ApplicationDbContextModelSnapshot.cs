@@ -41,7 +41,8 @@ namespace VennyHotel.Infrastructure.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<int>("Occupancy")
                         .HasColumnType("int");
@@ -90,6 +91,82 @@ namespace VennyHotel.Infrastructure.Migrations
                             Price = 400.0,
                             Sqft = 750
                         });
+                });
+
+            modelBuilder.Entity("VennyHotel.Domain.Entities.HotelNumber", b =>
+                {
+                    b.Property<int>("Hotel_Number")
+                        .HasColumnType("int");
+
+                    b.Property<int>("HotelId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("SpecialDetails")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Hotel_Number");
+
+                    b.HasIndex("HotelId");
+
+                    b.ToTable("HotelNumbers");
+
+                    b.HasData(
+                        new
+                        {
+                            Hotel_Number = 101,
+                            HotelId = 1
+                        },
+                        new
+                        {
+                            Hotel_Number = 102,
+                            HotelId = 1
+                        },
+                        new
+                        {
+                            Hotel_Number = 103,
+                            HotelId = 1
+                        },
+                        new
+                        {
+                            Hotel_Number = 104,
+                            HotelId = 1
+                        },
+                        new
+                        {
+                            Hotel_Number = 201,
+                            HotelId = 2
+                        },
+                        new
+                        {
+                            Hotel_Number = 202,
+                            HotelId = 2
+                        },
+                        new
+                        {
+                            Hotel_Number = 203,
+                            HotelId = 2
+                        },
+                        new
+                        {
+                            Hotel_Number = 301,
+                            HotelId = 3
+                        },
+                        new
+                        {
+                            Hotel_Number = 302,
+                            HotelId = 3
+                        });
+                });
+
+            modelBuilder.Entity("VennyHotel.Domain.Entities.HotelNumber", b =>
+                {
+                    b.HasOne("VennyHotel.Domain.Entities.Hotel", "Hotel")
+                        .WithMany()
+                        .HasForeignKey("HotelId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Hotel");
                 });
 #pragma warning restore 612, 618
         }

@@ -138,3 +138,5 @@ C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Web\obj\Debug\net8.0\refint\V
 C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Web\obj\Debug\net8.0\VennyHotel.Web.pdb
 C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Web\obj\Debug\net8.0\VennyHotel.Web.genruntimeconfig.cache
 C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Web\obj\Debug\net8.0\ref\VennyHotel.Web.dll
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Web\obj\Debug\net8.0\VennyHotel.Web.sourcelink.json
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Web\obj\Debug\net8.0\VennyHotel.Web.MvcApplicationPartsAssemblyInfo.cs

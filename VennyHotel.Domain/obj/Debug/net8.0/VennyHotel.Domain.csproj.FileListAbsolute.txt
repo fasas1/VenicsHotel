@@ -9,3 +9,5 @@ C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Domain\obj\Debug\net8.0\Venny
 C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Domain\obj\Debug\net8.0\refint\VennyHotel.Domain.dll
 C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Domain\obj\Debug\net8.0\VennyHotel.Domain.pdb
 C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Domain\obj\Debug\net8.0\ref\VennyHotel.Domain.dll
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Domain\obj\Debug\net8.0\VennyHotel.Domain.sourcelink.json
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Domain\obj\Debug\net8.0\VennyHotel.Domain.csproj.AssemblyReference.cache
