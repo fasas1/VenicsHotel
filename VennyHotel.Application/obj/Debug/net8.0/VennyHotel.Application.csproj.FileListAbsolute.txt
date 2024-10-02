@@ -10,3 +10,7 @@ C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Application\obj\Debug\net8.0\
 C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Application\obj\Debug\net8.0\VennyHotel.Application.pdb
 C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Application\obj\Debug\net8.0\ref\VennyHotel.Application.dll
 C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Application\obj\Debug\net8.0\VennyHotel.Application.sourcelink.json
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Application\bin\Debug\net8.0\VennyHotel.Domain.dll
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Application\bin\Debug\net8.0\VennyHotel.Domain.pdb
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Application\obj\Debug\net8.0\VennyHotel.Application.csproj.AssemblyReference.cache
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Application\obj\Debug\net8.0\VennyHot.E767421B.Up2Date

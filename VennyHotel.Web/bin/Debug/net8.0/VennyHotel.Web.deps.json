@@ -996,6 +996,14 @@
           }
         }
       },
+      "VennyHotel.Application/1.0.0": {
+        "dependencies": {
+          "VennyHotel.Domain": "1.0.0"
+        },
+        "runtime": {
+          "VennyHotel.Application.dll": {}
+        }
+      },
       "VennyHotel.Domain/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.Core": "2.2.5"
@@ -1007,6 +1015,7 @@
       "VennyHotel.Infrastructure/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.8",
+          "VennyHotel.Application": "1.0.0",
           "VennyHotel.Domain": "1.0.0"
         },
         "runtime": {
@@ -1699,6 +1708,11 @@
       "sha512": "sha512-IXoJOXIqc39AIe+CIR7koBtRGMiCt/LPM3lI+PELtDIy9XdyeSrwXFdWV9dzJ2Awl0paLWUaknLxFQ5HpHZUog==",
       "path": "system.windows.extensions/6.0.0",
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
+    },
+    "VennyHotel.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "VennyHotel.Domain/1.0.0": {
       "type": "project",

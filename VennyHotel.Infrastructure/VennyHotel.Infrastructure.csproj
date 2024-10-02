@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\VennyHotel.Application\VennyHotel.Application.csproj" />
     <ProjectReference Include="..\VennyHotel.Domain\VennyHotel.Domain.csproj" />
   </ItemGroup>
 

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OBdrb8E7Xm/B3YTGMTdKSgxasb0/Sdof6nt+MZTqtmE=",
+  "Hash": "irDBxDLj9VhoS/MdWwC1RtAelUav486fzIoDzhf++Ug=",
   "Source": "VennyHotel.Web",
   "BasePath": "_content/VennyHotel.Web",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\HomePC\\source\\repos\\VennyHotel\\VennyHotel.Web\\wwwroot\\images\\Hotel\\15ea9384-745d-4a19-8c0c-7d4b0e72d14e.jpg",
+      "SourceId": "VennyHotel.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HomePC\\source\\repos\\VennyHotel\\VennyHotel.Web\\wwwroot\\",
+      "BasePath": "_content/VennyHotel.Web",
+      "RelativePath": "images/Hotel/15ea9384-745d-4a19-8c0c-7d4b0e72d14e.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Hotel\\15ea9384-745d-4a19-8c0c-7d4b0e72d14e.jpg"
     },
     {
       "Identity": "C:\\Users\\HomePC\\source\\repos\\VennyHotel\\VennyHotel.Web\\wwwroot\\images\\notfound.jpg",

@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\HomePC\\source\\repos\\VennyHotel\\VennyHotel.Web\\wwwroot\\images\\Hotel\\15ea9384-745d-4a19-8c0c-7d4b0e72d14e.jpg",
+      "PackagePath": "staticwebassets\\images\\Hotel\\15ea9384-745d-4a19-8c0c-7d4b0e72d14e.jpg"
+    },
+    {
       "Id": "C:\\Users\\HomePC\\source\\repos\\VennyHotel\\VennyHotel.Web\\wwwroot\\images\\notfound.jpg",
       "PackagePath": "staticwebassets\\images\\notfound.jpg"
     },

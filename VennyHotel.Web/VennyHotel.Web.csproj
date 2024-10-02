@@ -22,4 +22,8 @@
     <ProjectReference Include="..\VennyHotel.Infrastructure\VennyHotel.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\Hotel\" />
+  </ItemGroup>
+
 </Project>

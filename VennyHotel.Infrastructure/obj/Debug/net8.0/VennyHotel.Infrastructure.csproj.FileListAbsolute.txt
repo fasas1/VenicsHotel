@@ -16,3 +16,5 @@ C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Infrastructure\obj\Debug\net8
 C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Infrastructure\obj\Debug\net8.0\VennyHotel.Infrastructure.genruntimeconfig.cache
 C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Infrastructure\obj\Debug\net8.0\ref\VennyHotel.Infrastructure.dll
 C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Infrastructure\obj\Debug\net8.0\VennyHotel.Infrastructure.sourcelink.json
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Infrastructure\bin\Debug\net8.0\VennyHotel.Application.dll
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Infrastructure\bin\Debug\net8.0\VennyHotel.Application.pdb

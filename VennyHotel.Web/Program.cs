@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
+using VennyHotel.Application.Common.Interface;
 using VennyHotel.Infrastructure.Data;
+using VennyHotel.Infrastructure.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,7 +11,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
-     
+
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
  
 
 
