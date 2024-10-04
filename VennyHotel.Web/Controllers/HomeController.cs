@@ -1,21 +1,31 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using VennyHotel.Application.Common.Interface;
 using VennyHotel.Web.Models;
+using VennyHotel.Web.ViewModels;
 
 namespace VennyHotel.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly IWebHostEnvironment _webHostEnvironment;
+        public HomeController(IUnitOfWork unitOfWork, IWebHostEnvironment webHostEnvironment)
         {
-            _logger = logger;
+            _unitOfWork = unitOfWork;
+            _webHostEnvironment = webHostEnvironment;
         }
 
         public IActionResult Index()
         {
-            return View();
+            HomeVM homeVM = new()
+            {
+                HotelList = _unitOfWork.Hotel.GetAll(includeProperties:"HotelAmenity"),
+                Nights =   1,
+                CheckInDate = DateOnly.FromDateTime(DateTime.Now)
+            };
+
+            return View(homeVM);
         }
 
         public IActionResult Privacy()

@@ -25,6 +25,14 @@
       "PackagePath": "staticwebassets\\images\\resort.png"
     },
     {
+      "Id": "C:\\Users\\HomePC\\source\\repos\\VennyHotel\\VennyHotel.Web\\wwwroot\\images\\slide1.jpg",
+      "PackagePath": "staticwebassets\\images\\slide1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HomePC\\source\\repos\\VennyHotel\\VennyHotel.Web\\wwwroot\\images\\slide2.jpg",
+      "PackagePath": "staticwebassets\\images\\slide2.jpg"
+    },
+    {
       "Id": "C:\\Users\\HomePC\\source\\repos\\VennyHotel\\VennyHotel.Web\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,13 +10,14 @@ using VennyHotel.Domain.Entities;
 
 namespace VennyHotel.Infrastructure.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options): base(options) { }
 
         public DbSet<Hotel> Hotels { get; set; }
         public DbSet<HotelNumber> HotelNumbers { get; set; }
         public DbSet<Amenity> Amenities { get; set; }
+        public DbSet<ApplicationUser> ApplicationUsers  { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
