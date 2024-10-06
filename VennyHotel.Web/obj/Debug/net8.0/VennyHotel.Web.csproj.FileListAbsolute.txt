@@ -152,3 +152,4 @@ C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Web\bin\Debug\net8.0\EntityFr
 C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Web\bin\Debug\net8.0\Microsoft.AspNet.Identity.Core.dll
 C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Web\bin\Debug\net8.0\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

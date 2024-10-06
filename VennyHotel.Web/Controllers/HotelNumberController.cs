@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using VennyHotel.Application.Common.Interface;
@@ -9,6 +10,7 @@ using VennyHotel.Web.ViewModels;
 
 namespace VennyHotel.Web.Controllers
 {
+    [Authorize]
     public class HotelNumberController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;

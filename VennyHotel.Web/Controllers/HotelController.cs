@@ -1,11 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using VennyHotel.Application.Common.Interface;
+using VennyHotel.Application.Common.Utility;
 using VennyHotel.Domain.Entities;
 using VennyHotel.Infrastructure.Data;
 using VennyHotel.Infrastructure.Repository;
 
 namespace VennyHotel.Web.Controllers
 {
+    [Authorize]
     public class HotelController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
