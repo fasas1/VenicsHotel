@@ -16,6 +16,7 @@ namespace VennyHotel.Infrastructure.Repository
         public IHotelNumberRepository HotelNumber { get; private set; }
         public IAmenityRepository Amenity { get; private set; }
         public IUserRepository User { get; private set; }
+        public IBookingRepository Booking { get; private set; }
 
         public UnitOfWork(ApplicationDbContext db)
         {
@@ -24,6 +25,7 @@ namespace VennyHotel.Infrastructure.Repository
             HotelNumber = new HotelNumberRepository(_db);
             Amenity = new AmenityRepository(_db);
             User = new UserRepository(_db);
+            Booking = new BookingRepository(_db);
         }
 
         public void Save()

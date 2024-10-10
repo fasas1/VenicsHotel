@@ -11,6 +11,7 @@ namespace VennyHotel.Application.Common.Interface
         IHotelRepository Hotel { get; }
         IHotelNumberRepository HotelNumber { get; }
         IAmenityRepository Amenity { get; }
+        IBookingRepository Booking { get; }
         void Save();
     }
 }
