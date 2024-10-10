@@ -41,6 +41,26 @@ namespace VennyHotel.Web.Controllers
                  return View(homeVM);
         }
 
+        public IActionResult GetHotelsByDate(int nights, DateOnly checkInDate)
+        {
+            var hotelList = _unitOfWork.Hotel.GetAll(includeProperties: "HotelAmenity").ToList();
+            foreach (var hotel in hotelList)
+            {
+                if (hotel.Id % 2 == 0)
+                {
+                    hotel.IsAvailable = false;
+                }
+            }
+            HomeVM homeVM = new()
+            {
+                HotelList = hotelList,
+                Nights = nights,
+                CheckInDate = checkInDate
+            };
+
+            return PartialView("_HotelList", homeVM);
+        }
+
         public IActionResult Privacy()
         {
             return View();
