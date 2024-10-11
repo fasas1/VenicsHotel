@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using VennyHotel.Application.Common.Interface;
 using VennyHotel.Domain.Entities;
 
@@ -9,8 +10,9 @@ namespace VennyHotel.Web.Controllers
         private readonly IUnitOfWork _unitOfWork;
         public BookingController(IUnitOfWork unitOfWork)
         {
-            _unitOfWork = unitOfWork;   
+            _unitOfWork = unitOfWork;
         }
+        [Authorize]
         public IActionResult FinalizedBooking(int hotelId, DateOnly checkInDate, int nights)
         {
             Booking booking = new Booking
