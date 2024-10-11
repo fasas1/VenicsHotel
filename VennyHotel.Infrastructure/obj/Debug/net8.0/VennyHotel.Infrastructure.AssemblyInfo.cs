@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VennyHotel.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+95978532669c98cb157a43308a2e0aa8f0a44503")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c5832da60c023cd48898f387fb3d3d7a099b309a")]
 [assembly: System.Reflection.AssemblyProductAttribute("VennyHotel.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VennyHotel.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

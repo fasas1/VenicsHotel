@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using VennyHotel.Application.Common.Interface;
+using VennyHotel.Application.Common.Utility;
 using VennyHotel.Domain.Entities;
 
 namespace VennyHotel.Web.Controllers
@@ -25,7 +26,7 @@ namespace VennyHotel.Web.Controllers
             Booking booking = new Booking
             {
                 HotelId = hotelId,
-                Hotel = _unitOfWork.Hotel.Get(u=> u.Id == hotelId, includeProperties:"HotelAmenity"),
+                Hotel = _unitOfWork.Hotel.Get(u => u.Id == hotelId, includeProperties: "HotelAmenity"),
                 CheckInDate = checkInDate,
                 Nights = nights,
                 CheckOutDate = checkInDate.AddDays(nights),
@@ -36,6 +37,30 @@ namespace VennyHotel.Web.Controllers
             };
             booking.TotalCost = booking.Hotel.Price * nights;
             return View(booking);
+        }
+
+        [Authorize]
+        [HttpPost]
+        public IActionResult FinalizedBooking(Booking booking)
+        {
+            var hotel = _unitOfWork.Hotel.Get(u => u.Id == booking.HotelId);
+
+            booking.TotalCost = booking.Hotel.Price * booking.Nights;
+            booking.Status = SD.StatusPending;
+            booking.BookingDate = DateTime.Now;
+
+            _unitOfWork.Booking.Add(booking);
+            _unitOfWork.Save();
+
+            return RedirectToAction(nameof(BookingConfirmation), new { bookingId = booking.Id });
+        }
+
+
+        [Authorize]
+
+        public IActionResult BookingConfirmation(int bookingId)
+        {
+            return View(bookingId);
         }
     }
 }
