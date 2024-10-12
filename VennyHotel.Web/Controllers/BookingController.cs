@@ -45,7 +45,7 @@ namespace VennyHotel.Web.Controllers
         {
             var hotel = _unitOfWork.Hotel.Get(u => u.Id == booking.HotelId);
 
-            booking.TotalCost = booking.Hotel.Price * booking.Nights;
+            booking.TotalCost = hotel.Price * booking.Nights;
             booking.Status = SD.StatusPending;
             booking.BookingDate = DateTime.Now;
 
