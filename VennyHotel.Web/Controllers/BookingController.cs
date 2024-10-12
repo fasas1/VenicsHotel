@@ -1,9 +1,15 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Stripe.BillingPortal;
+using Stripe;
+using Stripe.Checkout;
 using System.Security.Claims;
 using VennyHotel.Application.Common.Interface;
 using VennyHotel.Application.Common.Utility;
 using VennyHotel.Domain.Entities;
+using SessionCreateOptions = Stripe.Checkout.SessionCreateOptions;
+using SessionService = Stripe.Checkout.SessionService;
+using Session = Stripe.Checkout.Session;
 
 namespace VennyHotel.Web.Controllers
 {
@@ -52,7 +58,48 @@ namespace VennyHotel.Web.Controllers
             _unitOfWork.Booking.Add(booking);
             _unitOfWork.Save();
 
-            return RedirectToAction(nameof(BookingConfirmation), new { bookingId = booking.Id });
+
+
+
+            var domain = Request.Scheme + "://" + Request.Host.Value + "/";
+            var options = new SessionCreateOptions
+            {
+                SuccessUrl = domain + $"booking/BookingConfirmation?bookingId={booking.Id}",
+                CancelUrl = domain + $"booking/finalizeBooking?villaId={booking.HotelId}&checkInDate={booking.CheckInDate}&nights={booking.Nights}",
+                LineItems = new List<SessionLineItemOptions>(),
+                Mode = "payment",
+            };
+
+            options.LineItems.Add(new SessionLineItemOptions
+            {
+                PriceData = new SessionLineItemPriceDataOptions
+                {
+                    UnitAmount = (long)(booking.TotalCost * 100), // $20.50 => 2050
+                    Currency = "usd",
+                    ProductData = new SessionLineItemPriceDataProductDataOptions
+                    {
+                        Name = hotel.Name,
+                        //Images = new List<string>()
+                        //        {
+                        //            Request.Scheme + "://" + Request.Host.Value + villa.ImageUrl.Replace('\\','/')
+                        //        },
+
+                    }
+
+                },
+                Quantity = 1
+            });
+
+
+            var service = new SessionService();
+
+
+
+            Session session = service.Create(options);
+            _unitOfWork.Booking.UpdateStripePaymentId(booking.Id, session.Id, session.PaymentIntentId);
+            _unitOfWork.Save();
+            Response.Headers.Add("Location", session.Url);
+            return new StatusCodeResult(303);
         }
 
 

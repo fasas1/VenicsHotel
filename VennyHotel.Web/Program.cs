@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.IdentityModel.Tokens;
+using Stripe;
 using System.Text;
 using VennyHotel.Application.Common.Interface;
 using VennyHotel.Domain.Entities;
@@ -31,6 +32,7 @@ builder.Services.ConfigureApplicationCookie(options =>
 
 
 var app = builder.Build();
+StripeConfiguration.ApiKey = builder.Configuration.GetSection("Stripe:SecretKey").Get<string>();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
