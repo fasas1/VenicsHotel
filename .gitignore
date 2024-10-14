@@ -1,1 +1,6 @@
+# Ignore app settings (for security reasons)
+appsettings.json
+appsettings.*.json
+
+
 .vs/
