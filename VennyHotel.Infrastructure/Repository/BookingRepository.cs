@@ -24,7 +24,7 @@ namespace VennyHotel.Infrastructure.Repository
             _db.Bookings.Update(entity);
         }
 
-        public void UpdateStatus(int bookingId, string bookingStatus)
+        public void UpdateStatus(int bookingId, string bookingStatus, int v)
         {
             var bookingFromDb = _db.Bookings.FirstOrDefault(u => u.Id == bookingId);
             if (bookingFromDb == null)

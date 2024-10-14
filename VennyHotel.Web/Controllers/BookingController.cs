@@ -65,11 +65,11 @@ namespace VennyHotel.Web.Controllers
             var options = new SessionCreateOptions
             {
                 SuccessUrl = domain + $"booking/BookingConfirmation?bookingId={booking.Id}",
-                CancelUrl = domain + $"booking/finalizeBooking?villaId={booking.HotelId}&checkInDate={booking.CheckInDate}&nights={booking.Nights}",
+                CancelUrl = domain + $"booking/finalizeBooking?hotelId={booking.HotelId}&checkInDate={booking.CheckInDate}&nights={booking.Nights}",
                 LineItems = new List<SessionLineItemOptions>(),
                 Mode = "payment",
             };
-
+               
             options.LineItems.Add(new SessionLineItemOptions
             {
                 PriceData = new SessionLineItemPriceDataOptions
@@ -107,6 +107,22 @@ namespace VennyHotel.Web.Controllers
 
         public IActionResult BookingConfirmation(int bookingId)
         {
+            Booking bookingFromDb = _unitOfWork.Booking.Get(u => u.Id == bookingId, includeProperties: "User,Hotel");
+            if (bookingFromDb.Status == SD.StatusPending)
+            {
+                //this is a pending order
+
+                var service = new SessionService();
+                Session session = service.Get(bookingFromDb.StripeSessionId);
+
+                if (session.PaymentStatus.ToLower() == "paid")
+                {
+                    _unitOfWork.Booking.UpdateStripePaymentId(bookingId, session.Id, session.PaymentIntentId);
+                    _unitOfWork.Booking.UpdateStatus(bookingId, SD.StatusApproved, 0);
+                    _unitOfWork.Save();
+                }
+
+            }
             return View(bookingId);
         }
     }

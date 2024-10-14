@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\images\\notfound.jpg"
     },
     {
+      "Id": "C:\\Users\\HomePC\\source\\repos\\VennyHotel\\VennyHotel.Web\\wwwroot\\images\\orderConfirmed.jpg",
+      "PackagePath": "staticwebassets\\images\\orderConfirmed.jpg"
+    },
+    {
       "Id": "C:\\Users\\HomePC\\source\\repos\\VennyHotel\\VennyHotel.Web\\wwwroot\\images\\resort.png",
       "PackagePath": "staticwebassets\\images\\resort.png"
     },
