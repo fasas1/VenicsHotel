@@ -20,6 +20,13 @@ namespace VennyHotel.Web.Controllers
         {
             _unitOfWork = unitOfWork;
         }
+
+        //[Authorize]
+        public IActionResult Index()
+        {
+            return View();
+        }
+
         [Authorize]
         public IActionResult FinalizedBooking(int hotelId, DateOnly checkInDate, int nights)
         {
@@ -61,13 +68,14 @@ namespace VennyHotel.Web.Controllers
 
 
 
-            var domain = Request.Scheme + "://" + Request.Host.Value + "/";
+            var domain = Request.Scheme + "://" +Request.Host.Value+ "/";
             var options = new SessionCreateOptions
             {
-                SuccessUrl = domain + $"booking/BookingConfirmation?bookingId={booking.Id}",
-                CancelUrl = domain + $"booking/finalizeBooking?hotelId={booking.HotelId}&checkInDate={booking.CheckInDate}&nights={booking.Nights}",
                 LineItems = new List<SessionLineItemOptions>(),
                 Mode = "payment",
+                SuccessUrl = domain + $"booking/BookingConfirmation?bookingId={booking.Id}",
+                CancelUrl = domain + $"booking/finalizedBooking?hotelId={booking.HotelId}&checkInDate={booking.CheckInDate}&nights={booking.Nights}",
+        
             };
                
             options.LineItems.Add(new SessionLineItemOptions
@@ -93,9 +101,8 @@ namespace VennyHotel.Web.Controllers
 
             var service = new SessionService();
 
+             Session session = service.Create(options);
 
-
-            Session session = service.Create(options);
             _unitOfWork.Booking.UpdateStripePaymentId(booking.Id, session.Id, session.PaymentIntentId);
             _unitOfWork.Save();
             Response.Headers.Add("Location", session.Url);
@@ -115,15 +122,47 @@ namespace VennyHotel.Web.Controllers
                 var service = new SessionService();
                 Session session = service.Get(bookingFromDb.StripeSessionId);
 
-                if (session.PaymentStatus.ToLower() == "paid")
+                if (session.PaymentStatus == "paid")
                 {
-                    _unitOfWork.Booking.UpdateStripePaymentId(bookingId, session.Id, session.PaymentIntentId);
-                    _unitOfWork.Booking.UpdateStatus(bookingId, SD.StatusApproved, 0);
+                    _unitOfWork.Booking.UpdateStatus(bookingFromDb.Id, SD.StatusApproved);
+                    _unitOfWork.Booking.UpdateStripePaymentId(bookingFromDb.Id, session.Id, session.PaymentIntentId);
+
                     _unitOfWork.Save();
                 }
 
             }
             return View(bookingId);
         }
-    }
-}
+
+        [HttpGet]
+        //[Authorize]
+        public IActionResult GetAll()
+        {
+            IEnumerable<Booking> objBookings;
+            if (User.IsInRole(SD.Role_Admin))
+            {
+                objBookings = _unitOfWork.Booking.GetAll(includeProperties: "User,Hotel");
+            }
+            else
+            {
+
+                var claimsIdentity = (ClaimsIdentity)User.Identity;
+                var userId = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier).Value;
+
+                objBookings = _unitOfWork.Booking
+                    .GetAll(u => u.UserId == userId, includeProperties: "User,Hotel");
+            }
+
+            //if (!string.IsNullOrWhiteSpace(status))
+            //{
+            //    objBookings = objBookings.Where(u => u.Status.ToLower() == status.ToLower());
+            //}
+            objBookings = _unitOfWork.Booking.GetAll(includeProperties: "User,Hotel");
+
+            return Json(new { data = objBookings });
+         }
+      }
+   }
+
+
+

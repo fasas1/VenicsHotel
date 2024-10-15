@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "PwIoS/4WSWtpBacJdMBZemh6/ovzitbE9HW3zOMEcCI=",
+  "Hash": "KYMmRZ5QieypSuTlSLrFk4/kOFBqpSXeBqe+DhrgDaY=",
   "Source": "VennyHotel.Web",
   "BasePath": "_content/VennyHotel.Web",
   "Mode": "Default",
@@ -205,6 +205,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\slide2.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\HomePC\\source\\repos\\VennyHotel\\VennyHotel.Web\\wwwroot\\js\\booking.js",
+      "SourceId": "VennyHotel.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HomePC\\source\\repos\\VennyHotel\\VennyHotel.Web\\wwwroot\\",
+      "BasePath": "_content/VennyHotel.Web",
+      "RelativePath": "js/booking.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\booking.js"
     },
     {
       "Identity": "C:\\Users\\HomePC\\source\\repos\\VennyHotel\\VennyHotel.Web\\wwwroot\\js\\site.js",

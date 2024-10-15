@@ -11,8 +11,9 @@ namespace VennyHotel.Application.Common.Interface
     public interface IBookingRepository : IRepository<Booking>
     {
       void Update(Booking entity);
-      void UpdateStatus(int bookingId, string bookingStatus, int v);
-      void UpdateStripePaymentId(int bookingId,string sessionId,string paymentIntentId);
-
+      void UpdateStatus(int bookingId, string bookingStatus);
+        //void UpdateStatus(int id, string statusApproved);
+        void UpdateStripePaymentId(int bookingId,string sessionId,string paymentIntentId);
+        //void UpdateStripePaymentId(Booking bookingFromDb, string id, string paymentIntentId);
     }
 }

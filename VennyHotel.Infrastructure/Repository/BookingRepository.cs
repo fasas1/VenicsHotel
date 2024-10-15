@@ -24,10 +24,10 @@ namespace VennyHotel.Infrastructure.Repository
             _db.Bookings.Update(entity);
         }
 
-        public void UpdateStatus(int bookingId, string bookingStatus, int v)
+        public void UpdateStatus(int bookingId, string bookingStatus)
         {
             var bookingFromDb = _db.Bookings.FirstOrDefault(u => u.Id == bookingId);
-            if (bookingFromDb == null)
+            if (bookingFromDb != null)
             {
                 bookingFromDb.Status = bookingStatus;
                 if (bookingStatus == SD.StatusCheckedIn)
@@ -44,16 +44,16 @@ namespace VennyHotel.Infrastructure.Repository
         public void UpdateStripePaymentId(int bookingId, string sessionId, string paymentIntentId)
         {
             var bookingFromDb = _db.Bookings.FirstOrDefault(u => u.Id == bookingId);
-            if (bookingFromDb == null)
+            if (bookingFromDb != null)
             {
                 if (!string.IsNullOrWhiteSpace(sessionId))
                 {
                     bookingFromDb.StripeSessionId = sessionId;
                 }
 
-                if (!string.IsNullOrWhiteSpace(sessionId))
+                if (!string.IsNullOrWhiteSpace(paymentIntentId))
                 {
-                    bookingFromDb.StripePaymentIntentId = sessionId;
+                    bookingFromDb.StripePaymentIntentId = paymentIntentId;
                     bookingFromDb.PaymentDate = DateTime.Now;
                     bookingFromDb.IsPaymentSuccessful = true;
                 }
