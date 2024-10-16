@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VennyHotel.Domain.Entities;
 
 namespace VennyHotel.Application.Common.Utility
 {
@@ -19,5 +20,28 @@ namespace VennyHotel.Application.Common.Utility
         public const string StatusCancelled = "Cancelled";
         public const string StatusRefunded = "Refunded";
 
+
+        public static int HotelRoomsAvailable_Count(int hotelId,
+            List<HotelNumber> hotelNumberList, DateOnly checkInDate, int nights,
+            List<Booking> bookings)
+        {
+            List<int> bookingInDate = new();
+            
+            var roomsInHotel = hotelNumberList.Where(x => x.HotelId == hotelId).Count();
+
+            for(int i = 0; i < nights; i++)
+            {
+                var hotelsBooked = bookings.Where(u =>u.CheckInDate <= checkInDate.AddDays(i)
+                 && u.CheckOutDate > checkInDate.AddDays(i) && u.HotelId == hotelId);
+
+                foreach(var booking in hotelsBooked)
+                {
+                    if (!bookingInDate.Contains(booking.Id))
+                    {
+                        bookingInDate.Add(booking.Id);
+                    }
+                }
+            }
+        }
     }
 }
