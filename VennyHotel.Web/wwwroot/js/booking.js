@@ -1,7 +1,7 @@
 ﻿var dataTable;
 
 $(document).ready(function () {
-    //var url = window.location.search;
+   /* var url = window.location.search;*/
     //const urlParams = new URLSearchParams(window.location.search);
     //const status = urlParams.get('status');
     //console.log(status);
@@ -9,7 +9,7 @@ $(document).ready(function () {
 
 });
 
-function loadDataTable(status) {
+function loadDataTable() {
     dataTable = $('#tblBookings').DataTable({
         "ajax": { url: '/booking/getall'},
         "columns": [
@@ -28,7 +28,7 @@ function loadDataTable(status) {
                      <a href="/booking/bookingDetails?bookingId=${data}" class="btn btn-outline-warning mx-2"> <i class="bi bi-pencil-square"></i> Details</a>               
                     </div>`
                 },
-                "width": "15%"
+                
             }
         ]
     });

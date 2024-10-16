@@ -1,5 +1,9 @@
 ﻿@* @model List<Booking>
-@using VennyHotel.Application.Common.Utility
+
+
+ *@
+
+
 @{
     var status = Context.Request.Query["status"];
     var approved = "text-muted";
@@ -30,7 +34,7 @@
 
     }
 
-} *@
+}
 
 
 
@@ -43,7 +47,7 @@
                 </div>
             </div>
         </div>
-      @*   <div class="card-body p-4">
+        <div class="card-body p-4">
             <div class="d-flex justify-content-between pb-5 pt-2">
                 <span></span>
                 <ul class="list-group list-group-horizontal-sm">
@@ -63,8 +67,9 @@
                     <li class="list-group-item @cancelled"> @SD.StatusCancelled </li>
                     </a>
                 </ul>
-            </div> *@
+            </div>
             <table id="tblBookings" class="table border table-striped" style="width:100%">
+
                 <thead>
                     <tr>
                         <th>ID</th>

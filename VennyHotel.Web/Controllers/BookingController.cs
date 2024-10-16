@@ -134,8 +134,26 @@ namespace VennyHotel.Web.Controllers
             return View(bookingId);
         }
 
+        [Authorize]
+        public IActionResult BookingDetails(int bookingId)
+        {
+            Booking bookingFromDb = _unitOfWork.Booking.Get(u => u.Id == bookingId, includeProperties: "User,Hotel");
+            //if (bookingFromDb.HotelNumber == 0 && bookingFromDb.Status == SD.StatusApproved)
+            //{
+            //    var availableVillaNumbers = AssignAvailableHotelNumberByHotel(bookingFromDb.HotelId);
+
+            //    bookingFromDb.HotelNumbers = _unitOfWork.HotelNumber.GetAll().Where(m => m.HotelId == bookingFromDb.HotelId
+            //                && availableVillaNumbers.Any(x => x == m.Hotel_Number)).ToList();
+            //}
+            //else
+            //{
+            //    bookingFromDb.HotelNumbers = _unitOfWork.HotelNumber.GetAll().Where(m => m.HotelId == bookingFromDb.HotelId && m.Hotel_Number == bookingFromDb.HotelNumber).ToList();
+            //}
+            return View(bookingFromDb);
+        }
+
         [HttpGet]
-        //[Authorize]
+        [Authorize]
         public IActionResult GetAll()
         {
             IEnumerable<Booking> objBookings;
@@ -153,11 +171,10 @@ namespace VennyHotel.Web.Controllers
                     .GetAll(u => u.UserId == userId, includeProperties: "User,Hotel");
             }
 
-            //if (!string.IsNullOrWhiteSpace(status))
+            //if (!string.IsNullOrEmpty(status))
             //{
             //    objBookings = objBookings.Where(u => u.Status.ToLower() == status.ToLower());
             //}
-            objBookings = _unitOfWork.Booking.GetAll(includeProperties: "User,Hotel");
 
             return Json(new { data = objBookings });
          }
