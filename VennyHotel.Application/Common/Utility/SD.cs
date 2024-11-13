@@ -26,7 +26,7 @@ namespace VennyHotel.Application.Common.Utility
             List<Booking> bookings)
         {
             List<int> bookingInDate = new();
-            
+            int finalAvailableRoomForAllNights = int.MaxValue;
             var roomsInHotel = hotelNumberList.Where(x => x.HotelId == hotelId).Count();
 
             for(int i = 0; i < nights; i++)
@@ -41,7 +41,22 @@ namespace VennyHotel.Application.Common.Utility
                         bookingInDate.Add(booking.Id);
                     }
                 }
+
+                var totalAvailableRooms = roomsInHotel - bookingInDate.Count;
+                if(totalAvailableRooms == 0)
+                {
+                    return 0;
+                }
+                else
+                {
+                  if(finalAvailableRoomForAllNights > totalAvailableRooms)
+                    {
+                        finalAvailableRoomForAllNights = totalAvailableRooms;
+                    }
+                }
+             
             }
+            return finalAvailableRoomForAllNights;
         }
     }
 }

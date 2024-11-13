@@ -146,3 +146,4 @@ C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Web\bin\Debug\net8.0\Microsof
 C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Web\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Web\bin\Debug\net8.0\Stripe.net.dll
+C:\Users\HomePC\source\repos\VennyHotel\VennyHotel.Web\obj\Debug\net8.0\scopedcss\Views\Shared\_LayoutAdmin.cshtml.rz.scp.css

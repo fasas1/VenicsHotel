@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VennyHotel.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+119dae9482d8067fcf044441642a56205b02f680")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+02dc96af526fa5f3d3a03a9c25275da7cb859947")]
 [assembly: System.Reflection.AssemblyProductAttribute("VennyHotel.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VennyHotel.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

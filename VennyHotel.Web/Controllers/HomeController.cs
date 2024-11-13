@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using VennyHotel.Application.Common.Interface;
+using VennyHotel.Application.Common.Utility;
 using VennyHotel.Web.Models;
 using VennyHotel.Web.ViewModels;
 
@@ -44,13 +45,17 @@ namespace VennyHotel.Web.Controllers
         public IActionResult GetHotelsByDate(int nights, DateOnly checkInDate)
         {
             var hotelList = _unitOfWork.Hotel.GetAll(includeProperties: "HotelAmenity").ToList();
+            var hotelNumberList = _unitOfWork.HotelNumber.GetAll().ToList();
+            var bookedHotels = _unitOfWork.Booking.GetAll(u => u.Status== SD.StatusApproved ||
+                     u.Status == SD.StatusCheckedIn).ToList();
+
             foreach (var hotel in hotelList)
             {
-                if (hotel.Id % 2 == 0)
-                {
-                    hotel.IsAvailable = false;
-                }
+                 int roomAvailable = SD.HotelRoomsAvailable_Count(hotel.Id,hotelNumberList, checkInDate, nights, bookedHotels);
+
+                 hotel.IsAvailable = roomAvailable > 0 ? true : false;
             }
+
             HomeVM homeVM = new()
             {
                 HotelList = hotelList,
