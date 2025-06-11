@@ -1,6 +1,5 @@
 # 🏨 VenicsHotel (ASP.NET Core MVC – Clean Architecture)
 
-
 **VenicsHotel** is a modular hotel management backend built with **ASP.NET Core MVC** using **Clean Architecture** principles. It emphasizes separation of concerns, scalability, and testability while managing hotel operations such as room bookings, guest management, and user roles.
 
 ---
