@@ -24,7 +24,6 @@ The application uses a layered Clean Architecture pattern with the following key
 - SQL Server (via EF Core)
 - AutoMapper
 - FluentValidation
-- Unit Testing (xUnit, Moq)
 
 ---
 
